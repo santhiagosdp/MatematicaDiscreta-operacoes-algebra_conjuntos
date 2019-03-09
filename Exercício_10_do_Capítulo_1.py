@@ -1,5 +1,5 @@
-a = [1, 2, 3, 4, 8 , 11]
-b = [2, 3, 4, 5, 10]
+a = [1, 2, 3, 4]
+b = [1,2,3,4,5,6,7,8,9]
 print('Conjunto A', a)
 print('Conjunto B', b)
 print("")
@@ -65,3 +65,34 @@ for e in u: #percorrer U
                 d.insert(0,e)
 print (d)
 print("")
+
+print("COMPLEMENTO A em relação a B ")
+c=[]
+ehsubconjunto=0;
+
+for elem_b in b:
+    for elem_a in a:
+        if(elem_a==elem_b):
+            ehsubconjunto=ehsubconjunto+1
+            
+#print('qtsitenA=',subconjunto)
+if(len(a)==ehsubconjunto): #se A for subconjunto de B
+    for e in u: #percorrer U
+        for item_b in b: #percorrer B
+            verif=0
+            if(e==item_b):
+                for item_i in i: #percorrer I (intersecçao)
+                    if(e==item_i):
+                        verif=1
+                        break
+                if(verif==0):
+                    c.insert(0,e)
+    print (c)
+else:
+    print('Não se aplica, pois A não é SubConjunto de B')    
+print("")
+
+
+#Conjunto das partes
+#Produto cartesiano
+#União disjunta
