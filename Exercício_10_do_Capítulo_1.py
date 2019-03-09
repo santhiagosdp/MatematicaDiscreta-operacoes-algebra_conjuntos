@@ -1,4 +1,5 @@
-a = [1, 2, 3, 4]
+#a = [1, 2, 3, 4, [1,2]]
+a=['a','b','c','d']
 b = [1,2,3,4,5,6,7,8,9]
 print('Conjunto A', a)
 print('Conjunto B', b)
@@ -92,7 +93,23 @@ else:
     print('Não se aplica, pois A não é SubConjunto de B')    
 print("")
 
+print("CONJUNTO DAS PARTES DE A ") #∅
+p=['∅', a]
+cont=0
 
-#Conjunto das partes
+for elem_a in a:
+    pos=1+cont
+    c = [elem_a]
+    p.insert(0,c)
+    while (pos < len(a)):
+        c=[elem_a, a[pos]]
+        p.insert(0,c)
+        pos=pos+1
+    cont=cont+1
+print(p)
+print(len(p))
+print("")
+
+
 #Produto cartesiano
 #União disjunta
