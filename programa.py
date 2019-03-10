@@ -110,6 +110,18 @@ print(p)
 print(len(p))
 print("")
 
-
 #Produto cartesiano
+
+print("PRODUTO CARTESIANO")
+x = ['a','b','c','d']
+z = ['a','b']
+pc = []
+
+for i in x:
+  for j in z:
+    elem=[i,j]
+    pc.insert(0,elem)
+print ("produto cartesiano de ",x," e ",z)
+print (pc)
+
 #União disjunta
