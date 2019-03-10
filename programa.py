@@ -125,3 +125,21 @@ print ("produto cartesiano de ",x," e ",z)
 print (pc)
 
 #União disjunta
+
+print ("")
+print ("UNIÃO DISJUNTA")
+print ("A união disjunta x + z = {esquerda a | a in x} U {direita e | e in z}")
+print ("")
+
+un_dj=[]
+
+
+for i in a:
+  conj="esquerda(",i,")"
+  un_dj.extend(conj)
+
+for j in b:
+  conj="direita(",j,")"
+  un_dj.extend(conj)
+  
+print (un_dj)
