@@ -133,11 +133,17 @@ def uniaodisjunta(A,B):
 #FIM-UNIÃO DISJUNTA
 def main():
      print('uniao A{1,5} B{5,4,5} : ',uniao([1,5],[5,4,5]))
+     print('')
      print('Intersecção A{1,5} B{5,4,5}:',interseccao([1,5],[5,4,5]))
+     print('')
      print('Diferença A{1,5} B{5,4,5}:',diferenca([1,5],[5,4,5]))
+     print('')
      print('Complemento A{1,5} B{5,4,5}:',complemento([1,5],[5,4,5]))
+     print('')
      print('Conjunto das partes A{1,5,7,9,4}: ', conjunto_partes([1,5,7,9,4]))
+     print('')
      print('Produto Cartesiano A{1,5} B{5,4,5}: ',produto_cartesiano([1,5],[5,4,5]))
+     print('')
      print('União Disjunta  A{1,5} B{5,4,5}: ',uniaodisjunta([1,5],[5,4,5]))
      
 main()
