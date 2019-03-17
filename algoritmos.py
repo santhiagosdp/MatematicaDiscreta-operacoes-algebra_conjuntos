@@ -79,8 +79,8 @@ def complemento(A,B):
             c.insert(0,item_u)
     return c
   else:
-    #c= "{}{}{}{}".format("Não se aplica, pois: ",A," não é SubConjunto de: ",B)
-    c= f'{"Não se aplica, pois:"}{A}{" não é SubConjunto de: "}{B}' 
+    c= "{}{}{}{}".format("Não se aplica, pois: ",A," não é SubConjunto de: ",B)
+    #c = f'{"Não se aplica, pois:"}{A}{" não é SubConjunto de: "}{B}'
     return c
 #FIM-COMPLEMENTO
 
@@ -103,29 +103,30 @@ def conjunto_partes(A):
 #FIM-CONJUNTO DAS PARTES
 
 #PRODUTO CARTESIANO
-
-print("PRODUTO CARTESIANO")
-x = ['a','b','c','d']
-z = ['a','b']
-pc = []
-
-for i in x:
-  for j in z:
-    elem=[i,j]
-    pc.insert(0,elem)
-print ("produto cartesiano de ",x," e ",z)
-print (pc)
-
+def produto_cartesiano(A,B):
+    x = A
+    z = B
+    pc = []
+    for i in x:
+        for j in z:
+            elem=[i,j]
+            exist=0
+            for item in pc:
+                if(item==elem):
+                    exist=1
+            if(exist==0):
+                pc.insert(0,elem)
+    return pc
 #FIM-PRODUTO CARTESIANO
 
 
-print('uniao:',uniao([1,5,8,4,2,3],[5,4,5,3,2,1,5]))
-
-print('Intersecção:',interseccao([1,2,3,4],[4,6,7,1,9,0]))
-
-print('Diferença:',diferenca([1,2,3,4,6],[1,4,6,7,9,0]))
-
-print('Complemento:',complemento([1,2,3,9],[1,2,3,4,5]))
-
-print('Conjunto das partes: ', conjunto_partes([1,2,3]))
-
+def main():
+     print('uniao A{1,5} B{5,4,5} : ',uniao([1,5],[5,4,5]))
+     print('Intersecção A{1,5} B{5,4,5}:',interseccao([1,5],[5,4,5]))
+     print('Diferença A{1,5} B{5,4,5}:',diferenca([1,5],[5,4,5]))
+     print('Complemento A{1,5} B{5,4,5}:',complemento([1,5],[5,4,5]))
+     print('Conjunto das partes A{1,5,7,9,4}: ', conjunto_partes([1,5,7,9,4]))
+     print('Produto Cartesiano A{1,5} B{5,4,5}: ',produto_cartesiano([1,5],[5,4,5]))
+     print(' : ',)
+     
+main()
