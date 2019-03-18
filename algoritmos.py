@@ -5,6 +5,7 @@ def insere(A,a):
   for item in A:
     if(item == a):
         return A #Se exisitir, retorna A sem add
+        break
   A.append(a) #se n entrar no If, add a e retorna A
   return A 
 #FIM-INSERE
